@@ -17,7 +17,51 @@ module.exports = {
         }),
 
     ],
+    module: {
+        rules: [
+            {
+                test: /\.scss$/i,
+                use: [
 
+                    'style-loader',
+
+                    'css-loader',
+
+                    'sass-loader',
+                ],
+            },
+
+            {
+                test: /\.less$/,
+                use: [
+
+                    'style-loader',
+
+                    'css-loader',
+
+                    'less-loader',
+                ],
+
+            },
+            {
+                test: /\.styl$/i,
+                use: [
+
+                    'style-loader',
+
+                    'css-loader',
+
+                    'stylus-loader',
+                ],
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader',
+                ],
+            },
+        ],
+    },
 }
 
 
